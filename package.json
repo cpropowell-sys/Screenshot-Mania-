@@ -1,0 +1,10 @@
+{
+  "name": "screenshot-mania",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Chrome extension for shake-to-capture screenshots with clipboard and side panel actions.",
+  "scripts": {
+    "test": "node scripts/validate-extension.mjs"
+  },
+  "devDependencies": {}
+}

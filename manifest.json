@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Screenshot Mania",
+  "version": "0.1.0",
+  "description": "Shake your mouse to pop a Capture bubble, drag-select a screenshot, auto-copy it, and keep captures in a side panel.",
+  "permissions": [
+    "activeTab",
+    "clipboardWrite",
+    "sidePanel",
+    "storage",
+    "tabs",
+    "unlimitedStorage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "src/content.js"
+      ],
+      "css": [
+        "src/content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "side_panel": {
+    "default_path": "src/sidepanel.html"
+  },
+  "action": {
+    "default_title": "Screenshot Mania"
+  }
+}

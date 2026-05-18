@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  color: #eaf3ff;
+  background:
+    radial-gradient(circle at top left, rgba(47, 123, 255, 0.38), transparent 34%),
+    linear-gradient(180deg, #07111f 0%, #0d1728 100%);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+button {
+  border: 0;
+  font: inherit;
+}
+
+.shell {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px;
+}
+
+.hero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  color: #8ebcff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 26px;
+  letter-spacing: -0.04em;
+}
+
+.subhead {
+  margin-top: 8px;
+  color: #a8bad4;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.ghost,
+.actions button {
+  color: #eaf3ff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.ghost {
+  padding: 8px 10px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.ghost:hover,
+.actions button:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.tip-card,
+.capture-card {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(10px);
+}
+
+.tip-card {
+  display: flex;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 20px;
+}
+
+.tip-card p {
+  margin-top: 5px;
+  color: #a8bad4;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.orb {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 auto;
+  place-items: center;
+  color: white;
+  background: linear-gradient(135deg, #42a5ff, #2f7bff);
+  border-radius: 999px;
+  box-shadow: 0 14px 28px rgba(47, 123, 255, 0.35);
+}
+
+.captures {
+  display: grid;
+  gap: 12px;
+}
+
+.empty {
+  padding: 28px 16px;
+  color: #a8bad4;
+  text-align: center;
+  border: 1px dashed rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+}
+
+.capture-card {
+  overflow: hidden;
+  border-radius: 22px;
+}
+
+.capture-card img {
+  display: block;
+  width: 100%;
+  max-height: 230px;
+  object-fit: contain;
+  background: rgba(2, 8, 18, 0.45);
+}
+
+.capture-meta {
+  padding: 12px 12px 8px;
+}
+
+.capture-meta h2 {
+  overflow: hidden;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.capture-meta p {
+  margin-top: 5px;
+  color: #a8bad4;
+  font-size: 11px;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  padding: 0 12px 12px;
+}
+
+.actions button {
+  padding: 9px 8px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.actions button:first-child {
+  color: white;
+  background: linear-gradient(135deg, #42a5ff, #2f7bff);
+  border-color: transparent;
+}
+
+.actions .danger {
+  color: #ffc9d1;
+}
