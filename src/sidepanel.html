@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Screenshot Mania</title>
+    <link rel="stylesheet" href="sidepanel.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Screenshot Mania</p>
+          <h1>Capture shelf</h1>
+          <p class="subhead">Shake, capture, auto-copy, and keep your recent clips close.</p>
+        </div>
+        <button id="clear-all" class="ghost" type="button">Clear</button>
+      </header>
+
+      <section class="tip-card" aria-label="How to capture">
+        <span class="orb">✦</span>
+        <div>
+          <strong>Boop capture</strong>
+          <p>Shake your mouse on a webpage, click the blue Capture bubble, then drag-select your screenshot.</p>
+        </div>
+      </section>
+
+      <section id="captures" class="captures" aria-live="polite"></section>
+      <template id="capture-card-template">
+        <article class="capture-card">
+          <img alt="Captured screenshot preview">
+          <div class="capture-meta">
+            <h2></h2>
+            <p></p>
+          </div>
+          <div class="actions">
+            <button type="button" data-action="copy">Copy</button>
+            <button type="button" data-action="open">Open tab</button>
+            <button type="button" data-action="download">Download</button>
+            <button type="button" data-action="delete" class="danger">Delete</button>
+          </div>
+        </article>
+      </template>
+    </main>
+    <script src="sidepanel.js"></script>
+  </body>
+</html>
